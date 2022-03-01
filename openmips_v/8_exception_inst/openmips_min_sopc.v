@@ -1,37 +1,12 @@
 //////////////////////////////////////////////////////////////////////
-////                                                              ////
-//// Copyright (C) 2014 leishangwen@163.com                       ////
-////                                                              ////
-//// This source file may be used and distributed without         ////
-//// restriction provided that this copyright statement is not    ////
-//// removed from the file and that any derivative work contains  ////
-//// the original copyright notice and the associated disclaimer. ////
-////                                                              ////
-//// This source file is free software; you can redistribute it   ////
-//// and/or modify it under the terms of the GNU Lesser General   ////
-//// Public License as published by the Free Software Foundation; ////
-//// either version 2.1 of the License, or (at your option) any   ////
-//// later version.                                               ////
-////                                                              ////
-//// This source is distributed in the hope that it will be       ////
-//// useful, but WITHOUT ANY WARRANTY; without even the implied   ////
-//// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ////
-//// PURPOSE.  See the GNU Lesser General Public License for more ////
-//// details.                                                     ////
-////                                                              ////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
 // Module:  openmips_min_sopc
 // File:    openmips_min_sopc.v
-// Author:  Lei Silei
-// E-mail:  leishangwen@163.com
-// Description: »ùÓÚOpenMIPS´¦ÀíÆ÷µÄÒ»¸ö¼òµ¥SOPC£¬ÓÃÓÚÑéÖ¤¾ß±¸ÁË
-//              wishbone×ÜÏß½Ó¿ÚµÄopenmips£¬¸ÃSOPC°üº¬openmips¡¢
-//              wb_conmax¡¢GPIO controller¡¢flash controller£¬uart 
-//              controller£¬ÒÔ¼°ÓÃÀ´·ÂÕæflashµÄÄ£¿éflashmem£¬ÔÚÆäÖĞ
-//              ´æ´¢Ö¸Áî£¬ÓÃÀ´·ÂÕæÍâ²¿ramµÄÄ£¿édatamem£¬ÔÚÆäÖĞ´æ´¢
-//              Êı¾İ£¬²¢ÇÒ¾ßÓĞwishbone×ÜÏß½Ó¿Ú    
+// Description: åŸºäºOpenMIPSå¤„ç†å™¨çš„ä¸€ä¸ªç®€å•SOPCï¼Œç”¨äºéªŒè¯å…·å¤‡äº†
+//              wishboneæ€»çº¿æ¥å£çš„openmipsï¼Œè¯¥SOPCåŒ…å«openmipsã€
+//              wb_conmaxã€GPIO controllerã€flash controllerï¼Œuart 
+//              controllerï¼Œä»¥åŠç”¨æ¥ä»¿çœŸflashçš„æ¨¡å—flashmemï¼Œåœ¨å…¶ä¸­
+//              å­˜å‚¨æŒ‡ä»¤ï¼Œç”¨æ¥ä»¿çœŸå¤–éƒ¨ramçš„æ¨¡å—datamemï¼Œåœ¨å…¶ä¸­å­˜å‚¨
+//              æ•°æ®ï¼Œå¹¶ä¸”å…·æœ‰wishboneæ€»çº¿æ¥å£    
 // Revision: 1.0
 //////////////////////////////////////////////////////////////////////
 
@@ -44,7 +19,7 @@ module openmips_min_sopc(
 	
 );
 
-  //Á¬½ÓÖ¸Áî´æ´¢Æ÷
+  //è¿æ¥æŒ‡ä»¤å­˜å‚¨å™¨
   wire[`InstAddrBus] inst_addr;
   wire[`InstBus] inst;
   wire rom_ce;
